@@ -122,7 +122,7 @@ def build_executables():
     os.environ["CLAW"] = os.path.join(src_path, "clawpack-v5.5.0")
 
     if not os.path.isdir(os.path.join(repo_path, "bin")):
-        os.makedirs(os.path.isdir(os.path.join(repo_path, "bin")))
+        os.makedirs(os.path.join(repo_path, "bin"))
 
     for makefile in makefiles:
         logger.debug("Running make .exe for %s.", makefile)
@@ -193,12 +193,12 @@ def create_topo():
 
     logger.debug("Writing to topodata/topo.asc")
     headers = \
-        "ncols\t\t\t{}\n".format(X.shape[1]) + \
-        "nrows\t\t\t{}\n".format(X.shape[0]) + \
-        "xllcorner\t\t{}\n".format(-1.0) + \
-        "yllcorner\t\t{}\n".format(-1.0) + \
-        "cellsize\t\t{}\n".format(1.0) + \
-        "NODATA_value\t\t{}\n".format(-9999)
+        "ncols           {}\n".format(X.shape[1]) + \
+        "nrows           {}\n".format(X.shape[0]) + \
+        "xllcorner       {}\n".format(-1.0) + \
+        "yllcorner       {}\n".format(-1.0) + \
+        "cellsize        {}\n".format(1.0) + \
+        "NODATA_value    {}\n".format(-9999)
 
     with open(os.path.join(topodir_path, "topo.asc"), "w") as f:
         f.write(headers)
