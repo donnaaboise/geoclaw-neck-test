@@ -13,6 +13,7 @@ import os
 import numpy
 import matplotlib
 from matplotlib import pyplot
+from mpl_toolkits.mplot3d import Axes3D
 
 
 def get_Z_and_extent(topofile):
