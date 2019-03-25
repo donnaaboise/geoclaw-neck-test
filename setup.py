@@ -209,8 +209,8 @@ def create_topo():
     logger.info("Creating topo file succeeded.")
 
 if __name__ == "__main__":
-    download_clawpack()
-    decompress_clawpack()
-    setup_clawpack()
-    build_executables()
+    #download_clawpack()
+    #decompress_clawpack()
+    #setup_clawpack()
+    #build_executables()
     create_topo()
