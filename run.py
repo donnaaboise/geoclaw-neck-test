@@ -42,7 +42,7 @@ def create_data(casepath):
 
     setrunpath = os.path.join(casepath, "setrun.py")
     if not os.path.isfile(setrunpath):
-        logger.error("Case folder % does not have setrun.py.", casepath)
+        logger.error("Case folder %s does not have setrun.py.", casepath)
         raise FileNotFoundError("Case folder {} does not have setrun.py.".format(casepath))
 
     pwd = os.getcwd() # get current working directory
