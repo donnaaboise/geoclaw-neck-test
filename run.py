@@ -115,7 +115,7 @@ def run_case(solver, casepath):
     os.chdir(out_path)
 
     # run simulation
-    logger.info("Runngin case %s", casepath)
+    logger.info("Running case %s", casepath)
     logger.info("STDOUT is redirected to %s", os.path.join(casepath, "stdout.txt"))
     logger.info("STDERR is redirected to %s", os.path.join(casepath, "stderr.txt"))
     stdout = open(os.path.join(casepath, "stdout.txt"), "w")
